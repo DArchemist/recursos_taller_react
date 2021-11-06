@@ -1,5 +1,8 @@
+import { Link, useLocation } from "react-router-dom"
+
 const MainHeader = () => {
-    const isHomeRoute = true
+    const routeName = useLocation().pathname
+    const isHomeRoute = routeName === '/'
     if (isHomeRoute) {
         return (
             <nav className="navbar navbar-expand-lg navbar-light align-items-center justify-content-between main-header fixed-top p-5">
@@ -8,7 +11,9 @@ const MainHeader = () => {
                     <button className="btn my-2 my-sm-0 search-button scalable" type="submit"><i className="fas fa-search"></i></button>
                 </form>
                 <div>
-                    <i className="fas fa-shopping-cart white-icon fa-lg scalable2"></i>
+                    <Link to="/cart">
+                        <i className="fas fa-shopping-cart white-icon fa-lg scalable2"></i>
+                    </Link>
                     <div className="cart-items-counter text-center">
                         <b>2</b>
                     </div>
@@ -19,7 +24,9 @@ const MainHeader = () => {
         return (
             <nav className="navbar navbar-expand-lg navbar-light align-items-center justify-content-between main-header fixed-top p-5">
                 <div>
-                    <i class="fas fa-long-arrow-alt-left white-icon fa-lg scalable2"></i>
+                    <Link to="/">
+                        <i class="fas fa-long-arrow-alt-left white-icon fa-lg scalable2"></i>
+                    </Link>
                 </div>
                 <div>
                 </div>
