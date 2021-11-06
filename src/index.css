@@ -1,13 +1,157 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Quicksand:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.white-icon {
+  color: white;
+}
+
+.main-header {
+  background: #0a0d52;
+}
+
+.search-input {
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.search-button {
+  width: 101px;
+  background: #c4c4c4;
+  border-radius: 15px;
+}
+
+.item-image {
+  width: auto;
+}
+
+.sub-box {
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.scalable {
+  transition: transform 0.2s; /* Animation */
+}
+
+.scalable2 {
+  transition: transform 0.2s; /* Animation */
+}
+
+.scalable:hover {
+  transform: scale(1.02);
+}
+
+.scalable2:hover {
+  transform: scale(1.4);
+}
+
+.item-card {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.add-button {
+  background: #0a0d52;
+  border-radius: 3px;
+}
+
+.app-view {
+  position: relative;
+  top: calc(20vh + 0.3 * (30vh - 15vw));
+}
+
+.cart-items-header {
+  background: #c4c4c4;
+  height: 8vh;
+}
+
+.cart-item {
+  border: 2px solid #c4c4c4;
+  height: 15vh;
+  color: black;
+}
+
+.btn-remove-1 {
+  border: 2px solid rgb(75, 75, 75);
+  background: red;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-add-1 {
+  border: 2px solid rgb(75, 75, 75);
+  background: rgb(2, 126, 2);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-remove-input {
+  width: 40px;
+}
+
+.cart-summary-container {
+  border: 2px solid #c4c4c4;
+  height: 75vh;
+  width: 47%;
+}
+
+.go-payment-button {
+  background: #0a0d52;
+  border-radius: 5px;
+  color: white;
+  width: 20vw;
+}
+
+.trash-bin {
+  cursor: pointer;
+}
+
+.cart-items-counter {
+  background: red;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  bottom: 40px;
+  left: 20px;
+}
+
+.payment-form-container {
+  border: 2px solid #c4c4c4;
+}
+
+.cvv-input {
+  width: 80px;
+}
+
+.card-representation {
+  background: linear-gradient(
+    90deg,
+    #095891 17%,
+    rgba(196, 196, 196, 0) 187.38%
+  );
+  border-radius: 10px;
+  width: 492px;
+  height: 269px;
+  color: white;
+  padding-top: 2px;
+  font-size: 13pt;
+}
+
+.img-container {
+  height: 50%;
 }
