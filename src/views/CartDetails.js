@@ -1,4 +1,5 @@
 import CartItemsContainer from "../components/CartItemsContainer"
+import CartSummary from "../components/CartSummary"
 
 const CartDetails = () => {
     return (
@@ -7,6 +8,7 @@ const CartDetails = () => {
                 <CartItemsContainer />
             </div>
             <div className="col- 12 col-lg-6">
+                <CartSummary />
             </div>
         </div>
     )
