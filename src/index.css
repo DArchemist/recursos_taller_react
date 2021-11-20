@@ -155,3 +155,7 @@
 .img-container {
   height: 50%;
 }
+
+.cart-summary-container {
+  font-family: monospace !important;
+}

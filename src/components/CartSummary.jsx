@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import SummaryItem from "./SummaryItem";
 import SummaryTotal from "./SummaryTotal";
 
-const _ = require("lodash");
 
-const CartSummary = () => {
-    const itemsToRender = []
-    _.times(8, () => {
-        itemsToRender.push(<SummaryItem />)
+const CartSummary = ( { cart }) => {
+    const reducer = (previousValue, currentValue) => previousValue + currentValue.price * currentValue.amount
+    let total = cart.reduce(reducer, 0)
+    const itemsToRender = cart.map((item) => {
+        return <SummaryItem title={ item.title } amount={ item.amount} price={ item.price } /> 
     })
     return (
         <div className="cart-summary-container m-0 p-3 position-fixed overflow-auto">
@@ -17,9 +18,11 @@ const CartSummary = () => {
                 itemsToRender
             }
 
-            <SummaryTotal />
+            <SummaryTotal total={ total }/>
             <div className="d-flex justify-content-center mt-5">
-                <button className="btn go-payment-button">Go to payment</button>
+                <Link to="/payment">
+                    <button className="btn go-payment-button">Go to payment</button>
+                </Link>
             </div>  
         </div>
     )
